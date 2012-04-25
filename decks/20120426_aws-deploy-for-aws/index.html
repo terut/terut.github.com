@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress.css" rel="stylesheet" />
+</head>
+<body>
+<div id="impress" class="impress-not-supported">
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+<div id="title" class="step" data-y="0" data-x="0">
+<h2>AWSでのデプロイの話</h2>
+
+<p>Terunori Togo (@terut)</p>
+
+</div>
+<div class="step" data-y="0" data-x="1200">
+<h2>デプロイといえば</h2>
+
+<p>Capistrano</p>
+
+<p>＊多分に偏見が入っています</p>
+
+</div>
+<div class="step" data-y="0" data-x="2400">
+<h2>デプロイするには</h2>
+
+<p>deploy.rb書いて</p>
+
+<pre><code>$ bundle exec cap production deploy
+</code></pre>
+
+<p>capistrano_extは使ってるよね、ね</p>
+
+</div>
+<div class="step" data-y="0" data-x="3600">
+<h2>簡単ですね</h2>
+
+</div>
+<div class="step" data-y="0" data-x="4800">
+<h2>ある日</h2>
+
+<p>某PHPプロジェクト降臨</p>
+
+</div>
+<div class="step" data-y="800" data-x="0">
+<h2>AWS使ってた</h2>
+
+</div>
+<div class="step" data-y="800" data-x="1200">
+<h2>簡単ですね</h2>
+
+<p>僕等にはCapistranoあるし、PHPでの採用実績も色々あるっぽい</p>
+
+</div>
+<div class="step" data-y="800" data-x="2400">
+<h2>AWSは簡単じゃなかった</h2>
+
+<p><img src="img/freeza.jpg" width="45%"/></p>
+
+</div>
+<div class="step" data-y="800" data-x="3600">
+<h2>Auto Scaling</h2>
+
+<p>ELB（ロードバランサ）にぶらさがってるインスタンスの<br/>
+CPU使用率の平均が50%以上だったらインスタンス追加<br/>
+とかできる</p>
+
+</div>
+<div class="step" data-y="800" data-x="4800">
+<h2>Capistranoによるデプロイ</h2>
+
+<p>デプロイ先は固定であり、勝手に増殖するインスタンスの<br/>
+面倒は見れない</p>
+
+<p><img src="img/nandatte--.jpg" /></p>
+
+</div>
+<div class="step" data-y="1600" data-x="0">
+<h2>かくして僕の切り札はやぶれたやばい</h2>
+
+</div>
+<div class="step" data-y="1600" data-x="1200">
+<h2>先人の知恵</h2>
+
+<p>某PHPプロジェクトはよく考えられてた<br/></p>
+
+</div>
+<div class="step" data-y="1600" data-x="2400">
+<h2>説明しよう</h2>
+
+</div>
+
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+
+</body>
+</html>
+
