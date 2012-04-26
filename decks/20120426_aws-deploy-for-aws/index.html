@@ -22,12 +22,14 @@
 <div class="step" data-y="0" data-x="1200">
 <h2>デプロイといえば</h2>
 
-<p>Capistrano</p>
-
-<p>＊多分に偏見が入っています</p>
-
 </div>
 <div class="step" data-y="0" data-x="2400">
+<h2>Capistrano</h2>
+
+<p>多分に偏見が入っています</p>
+
+</div>
+<div class="step" data-y="0" data-x="3600">
 <h2>デプロイするには</h2>
 
 <p>deploy.rb書いて</p>
@@ -38,33 +40,34 @@
 <p>capistrano_extは使ってるよね、ね</p>
 
 </div>
-<div class="step" data-y="0" data-x="3600">
+<div class="step" data-y="0" data-x="4800">
 <h2>簡単ですね</h2>
 
 </div>
-<div class="step" data-y="0" data-x="4800">
+<div class="step" data-y="800" data-x="0">
 <h2>ある日</h2>
 
 <p>某PHPプロジェクト降臨</p>
 
 </div>
-<div class="step" data-y="800" data-x="0">
+<div class="step" data-y="800" data-x="1200">
 <h2>AWS使ってた</h2>
 
 </div>
-<div class="step" data-y="800" data-x="1200">
+<div class="step" data-y="800" data-x="2400">
 <h2>簡単ですね</h2>
 
-<p>僕等にはCapistranoあるし、PHPでの採用実績も色々あるっぽい</p>
+<p>僕等にはCapistranoあるし、PHPでの採用実績も<br/>
+色々あるっぽい</p>
 
 </div>
-<div class="step" data-y="800" data-x="2400">
+<div class="step" data-y="800" data-x="3600">
 <h2>AWSは簡単じゃなかった</h2>
 
 <p><img src="img/freeza.jpg" width="45%"/></p>
 
 </div>
-<div class="step" data-y="800" data-x="3600">
+<div class="step" data-y="800" data-x="4800">
 <h2>Auto Scaling</h2>
 
 <p>ELB（ロードバランサ）にぶらさがってるインスタンスの<br/>
@@ -72,7 +75,7 @@ CPU使用率の平均が50%以上だったらインスタンス追加<br/>
 とかできる</p>
 
 </div>
-<div class="step" data-y="800" data-x="4800">
+<div class="step" data-y="1600" data-x="0">
 <h2>Capistranoによるデプロイ</h2>
 
 <p>デプロイ先は固定であり、勝手に増殖するインスタンスの<br/>
@@ -81,18 +84,139 @@ CPU使用率の平均が50%以上だったらインスタンス追加<br/>
 <p><img src="img/nandatte--.jpg" /></p>
 
 </div>
-<div class="step" data-y="1600" data-x="0">
-<h2>かくして僕の切り札はやぶれたやばい</h2>
+<div class="step" data-y="1600" data-x="1200">
+<h2>かくして僕の切り札は<br/>やぶれたやばい</h2>
 
 </div>
-<div class="step" data-y="1600" data-x="1200">
+<div class="step" data-y="1600" data-x="2400">
 <h2>先人の知恵</h2>
 
 <p>某PHPプロジェクトはよく考えられてた<br/></p>
 
 </div>
-<div class="step" data-y="1600" data-x="2400">
+<div class="step" data-y="1600" data-x="3600">
 <h2>説明しよう</h2>
+
+<p><img src="img/svn-deploy.png" width="90%"/></p>
+
+</div>
+<div class="step" data-y="1600" data-x="4800">
+<h2>頭よい</h2>
+
+<p>僕にはセンスなんてなかったんやー</p>
+
+</div>
+<div class="step" data-y="2400" data-x="0">
+<h2>Batch散らばりすぎやばい</h2>
+
+<p>集約したいよね、ね</p>
+
+</div>
+<div class="step" data-y="2400" data-x="1200">
+<h2>セイヤーッ！</h2>
+
+<p><img src="img/aws-desigin.png" width="90%"/></p>
+
+<p>http://aws.clouddesignpattern.org</p>
+
+</div>
+<div class="step" data-y="2400" data-x="2400">
+<h2>クラウドデザインパターン</h2>
+
+<p>センスのない僕とー、AWSクラウドデザインパターンがー、<br/>
+出会ったー</p>
+
+</div>
+<div class="step" data-y="2400" data-x="3600">
+<h2>Clone Server Pattern</h2>
+
+<p><img src="img/clone-server.png" /></p>
+
+</div>
+<div class="step" data-y="2400" data-x="4800">
+<h2>俺たちのrsync</h2>
+
+<p>そうやrsyncやrsyncなんやー</p>
+
+</div>
+<div class="step" data-y="3200" data-x="0">
+<h2>NEW アプローチ</h2>
+
+<p><img src="img/owl.jpeg" width="45%"/></p>
+
+</div>
+<div class="step" data-y="3200" data-x="1200">
+<h2>owlsync</h2>
+
+<p><img src="img/owlsync.png" width="90%" /></p>
+
+</div>
+<div class="step" data-y="3200" data-x="2400">
+<h2>仕組み</h2>
+
+<p>Deploy ServerにAuto Scalingであがってきたインスタンスを
+監視するデーモンを立てて新しく立ち上がってきたらrsync</p>
+
+<p>既に同期したものは同期しない</p>
+
+<p><br/>
+https://github.com/terut/owlsync</p>
+
+</div>
+<div class="step" data-y="3200" data-x="3600">
+<h2>動作確認して本番投入</h2>
+
+</div>
+<div class="step" data-y="3200" data-x="4800">
+<h2>できませんでした</h2>
+
+<p><img src="img/hammer.jpeg" width="45%" /></p>
+
+</div>
+<div class="step" data-y="4000" data-x="0">
+<h2>言い訳</h2>
+
+<ul>
+<li>Twigがowner apacheではいて発狂</li>
+<li>cronの設定ファイルはowner rootじゃないと動かない発狂</li>
+<li>つまりdeploy用のユーザとrootとapacheが入り乱れて発狂 </li>
+<li>rsyncがsudoで動くように各サーバにrsync用のスクリプトを置く必要があって発狂</li>
+<li>owlsyncみたいなテストないgemは使うなってばあちゃんが言ってた</li>
+<li>設計固まってなかったので試してみて成功したらテスト書くつもりだったけど言い訳</li>
+<li>テスト書きますすいません</li>
+</ul>
+
+</div>
+<div class="step" data-y="4000" data-x="1200">
+<h2>先人の知恵は偉大</h2>
+
+<p>さっさと安定させたかったので、svnのデプロイを<br/>
+gitにリプレイスした</p>
+
+</div>
+<div class="step" data-y="4000" data-x="2400">
+<h2>かっー、安定運用いいわー、かっー</h2>
+
+</div>
+<div class="step" data-y="4000" data-x="3600">
+<h2>Shibuya.rbでヒント得た</h2>
+
+<ul>
+<li>user scriptで起動時にrsync</li>
+<li>s3syncを使って同期(できるのかしら)</li>
+<li>もっと良い方法あれば教えて</li>
+</ul>
+
+<p><br/>
+NFSは止まると処理がブロックされてアボーンするので<br/>やりたくない</p>
+
+</div>
+<div class="step" data-y="4000" data-x="4800">
+<h2>AWSこわくない</h2>
+
+<p>AWSで楽しいデプロイライフを！</p>
+
+<p>間違ってもrootでシステムを運用するんじゃないぞ！</p>
 
 </div>
 
